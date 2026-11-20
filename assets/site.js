@@ -5,7 +5,7 @@
   function set(l){
     root.lang=l; root.dir=(l==='ar')?'rtl':'ltr';
     btn.textContent=(l==='ar')?'English':'عربي';
-    document.title=(l==='ar')?'أمير صلاح، مطوّر بيانات وبايثون مستقل':'Amir Salah, Freelance Data and Python Developer';
+    document.title=(l==='ar')?'أمير صلاح (Amir Salah) | مطوّر بيانات وبايثون مستقل':'Amir Salah (أمير صلاح) | Freelance Data and Python Developer';
     opts.forEach(function(o){ o.textContent=o.getAttribute(l==='ar'?'data-ar':'data-en'); });
     try{localStorage.setItem('lang',l)}catch(e){}
   }
