@@ -3,19 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Amir Salah, Freelance Developer</title>
-<meta name="description" content="Amir Salah: freelance developer in Aqaba, Jordan. Data analysis, machine learning and Python web apps.">
-<meta property="og:title" content="Amir Salah, Freelance Developer">
-<meta property="og:description" content="Data analysis, machine learning and Python web apps. Based in Aqaba, Jordan.">
+<title>Amir Salah, Freelance Data and Python Developer</title>
+<meta name="description" content="Amir Salah is a freelance developer in Aqaba, Jordan. Dashboards, machine learning models and management systems for businesses, in Arabic and English.">
+<meta property="og:title" content="Amir Salah, Freelance Data and Python Developer">
+<meta property="og:description" content="Dashboards, machine learning models and management systems for businesses. Based in Aqaba, Jordan, working remotely.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0E1116">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='47' fill='%230E1116' stroke='%23C9A45C' stroke-width='4'/%3E%3Ctext x='50' y='64' font-family='Arial' font-weight='700' font-size='40' fill='%23C9A45C' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0E1116; --ink-2:#151A22; --line:#2A2F38;
-  --gold:#C9A45C; --gold-soft:#C9A45C33;
-  --text:#F2EFE8; --muted:#A9A49A;
+  --ink:#0E1116; --ink-2:#141922; --ink-3:#1A202B; --line:#262C36;
+  --gold:#C9A45C; --gold-2:#D9B76F; --gold-soft:#C9A45C26;
+  --text:#F2EFE8; --muted:#A9A49A; --dim:#7D796F;
   --display:'Space Grotesk',system-ui,sans-serif;
   --body:'Inter',system-ui,sans-serif;
   --mono:'JetBrains Mono',ui-monospace,monospace;
@@ -29,44 +31,61 @@ body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:1
 html[lang="ar"] body{line-height:1.8}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
 @media (max-width:480px){ .wrap{padding:0 18px} }
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+html[lang="ar"] .eyebrow{font-family:var(--body);letter-spacing:0;font-size:14px;font-weight:600}
 
 /* header */
-header{position:sticky;top:0;z-index:10;background:rgba(14,17,22,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:20px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:600;font-size:17px}
-.brand svg{width:34px;height:34px}
-nav{display:flex;align-items:center;gap:26px;font-size:15px}
+header{position:sticky;top:0;z-index:10;background:rgba(14,17,22,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:66px;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:600;font-size:17px;line-height:1.15}
+.brand small{display:block;font-family:var(--body);font-weight:400;font-size:12.5px;color:var(--muted)}
+.brand svg{width:36px;height:36px;flex:none}
+nav{display:flex;align-items:center;gap:24px;font-size:15px}
 nav a{text-decoration:none;color:var(--muted)}
 nav a:hover{color:var(--text)}
 .lang{background:none;border:1px solid var(--line);color:var(--text);font:500 14px var(--body);padding:6px 14px;border-radius:999px;cursor:pointer}
 .lang:hover{border-color:var(--gold)}
-@media (max-width:760px){ nav a{display:none} }
+nav .hire{color:var(--ink);background:var(--gold);padding:8px 16px;border-radius:8px;font-weight:600}
+nav .hire:hover{background:var(--gold-2);color:var(--ink)}
+@media (max-width:900px){ nav a:not(.hire){display:none} }
+@media (max-width:420px){ .brand small{display:none} nav{gap:10px} }
+
+/* buttons */
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:16px;padding:13px 24px;border-radius:8px;border:1px solid var(--gold);transition:background .2s,color .2s;cursor:pointer;font-family:var(--body)}
+.btn.primary{background:var(--gold);color:var(--ink)}
+.btn.primary:hover{background:var(--gold-2)}
+.btn.ghost{color:var(--gold);background:none}
+.btn.ghost:hover{background:var(--gold-soft)}
 
 /* hero */
-.hero{padding:96px 0 88px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse 60% 70% at 80% 40%,#161B24 0%,transparent 70%)}
-.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
-.status{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--muted);margin-bottom:28px}
+.hero{padding:88px 0 0;background:radial-gradient(ellipse 60% 70% at 85% 30%,#171D27 0%,transparent 70%)}
+.hero .grid{display:grid;grid-template-columns:1.3fr .7fr;gap:48px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--muted);margin-bottom:26px;border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 12px}
 .status i{flex:none;width:8px;height:8px;border-radius:50%;background:#5BC98A;box-shadow:0 0 0 4px #5BC98A22}
-h1{font-family:var(--display);font-weight:700;font-size:clamp(48px,8vw,92px);line-height:.98;letter-spacing:-.02em}
-html[lang="ar"] h1{letter-spacing:0;line-height:1.15}
-.lede{font-family:var(--display);font-weight:500;font-size:clamp(21px,2.6vw,28px);line-height:1.35;color:var(--text);margin:26px 0 14px;max-width:30ch}
-.sub{color:var(--muted);max-width:52ch}
-.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
-.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:16px;padding:13px 24px;border-radius:8px;border:1px solid var(--gold);transition:background .2s,color .2s}
-.btn.primary{background:var(--gold);color:var(--ink)}
-.btn.primary:hover{background:#D9B76F}
-.btn.ghost{color:var(--gold)}
-.btn.ghost:hover{background:var(--gold-soft)}
-.mark{width:100%;max-width:340px;justify-self:center}
-@media (max-width:820px){
-  .hero{padding:56px 0 64px}
-  .hero .wrap{grid-template-columns:1fr}
-  .mark{order:-1;max-width:150px;justify-self:start}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(38px,5.6vw,66px);line-height:1.04;letter-spacing:-.02em;max-width:17ch;text-wrap:balance}
+h1 em{font-style:normal;color:var(--gold)}
+html[lang="ar"] h1{letter-spacing:0;line-height:1.3}
+.sub{color:var(--muted);font-size:19px;max-width:54ch;margin-top:22px}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.mark{width:100%;max-width:320px;justify-self:center}
+.proof{display:grid;grid-template-columns:repeat(4,1fr);margin-top:76px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.proof div{padding:24px 22px;border-inline-start:1px solid var(--line)}
+.proof div:first-child{border-inline-start:0;padding-inline-start:0}
+.proof b{display:block;font-family:var(--display);font-weight:600;font-size:26px;color:var(--text);line-height:1.2}
+.proof span{font-size:14px;color:var(--muted)}
+@media (max-width:860px){
+  .hero{padding-top:48px}
+  .hero .grid{grid-template-columns:1fr}
+  .mark{order:-1;max-width:120px;justify-self:start}
+  .proof{grid-template-columns:1fr 1fr;margin-top:52px}
+  .proof div{padding:20px 16px}
+  .proof div:nth-child(3){border-inline-start:0;padding-inline-start:0}
+  .proof div:nth-child(n+3){border-top:1px solid var(--line)}
 }
 
-/* logo draw-in: the one moment of motion */
+/* logo draw-in */
 .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.6s cubic-bezier(.6,0,.2,1) forwards}
 .draw.d2{animation-delay:.9s;animation-duration:1.3s}
 .fade{opacity:0;animation:fade .7s ease forwards}
@@ -79,60 +98,94 @@ html[lang="ar"] h1{letter-spacing:0;line-height:1.15}
 }
 
 /* sections */
-section{padding:88px 0;border-bottom:1px solid var(--line);scroll-margin-top:64px}
-h2{font-family:var(--display);font-weight:600;font-size:clamp(30px,4vw,42px);letter-spacing:-.01em;margin-bottom:12px}
-html[lang="ar"] h2{letter-spacing:0}
-.intro{color:var(--muted);max-width:60ch;margin-bottom:48px}
-@media (max-width:760px){ section{padding:64px 0} }
+section{padding:96px 0;border-bottom:1px solid var(--line);scroll-margin-top:66px}
+h2{font-family:var(--display);font-weight:600;font-size:clamp(30px,4vw,44px);letter-spacing:-.015em;line-height:1.15;margin-bottom:14px;max-width:24ch;text-wrap:balance}
+html[lang="ar"] h2{letter-spacing:0;line-height:1.4}
+.intro{color:var(--muted);max-width:62ch;margin-bottom:48px;font-size:18px}
+@media (max-width:760px){ section{padding:68px 0} }
+.tools{font-family:var(--mono);font-size:13px;color:var(--gold)}
+html[lang="ar"] .tools{direction:ltr;text-align:right}
+
+/* services */
+.services{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.svc{background:var(--ink-2);border:1px solid var(--line);border-radius:14px;padding:30px;display:flex;flex-direction:column}
+.svc .ico{width:42px;height:42px;border-radius:10px;border:1px solid var(--gold-soft);display:grid;place-items:center;margin-bottom:18px}
+.svc .ico svg{width:22px;height:22px;stroke:var(--gold)}
+.svc h3{font-family:var(--display);font-weight:600;font-size:22px;margin-bottom:8px}
+.svc > p{color:var(--muted);margin-bottom:18px}
+.svc ul{list-style:none;display:grid;gap:8px;margin-bottom:22px;font-size:15.5px}
+.svc li{padding-inline-start:22px;position:relative}
+.svc li::before{content:"";position:absolute;inset-inline-start:0;top:.55em;width:10px;height:6px;border-inline-start:1.6px solid var(--gold);border-bottom:1.6px solid var(--gold);transform:rotate(-45deg)}
+html[lang="ar"] .svc li::before{transform:rotate(45deg) scaleX(-1)}
+.svc .for{font-size:14px;color:var(--dim);margin-top:auto;padding-top:16px;border-top:1px solid var(--line)}
+.svc .for b{color:var(--muted);font-weight:500}
+@media (max-width:760px){ .services{grid-template-columns:1fr} .svc{padding:24px} }
+
+/* process */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
+.steps li{padding:0 24px 0 0;position:relative}
+html[lang="ar"] .steps li{padding:0 0 0 24px}
+.steps .n{font-family:var(--mono);font-size:13px;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.steps .n::after{content:"";flex:1;height:1px;background:var(--line)}
+.steps h3{font-family:var(--display);font-weight:600;font-size:20px;margin-bottom:8px}
+.steps p{color:var(--muted);font-size:15.5px}
+@media (max-width:860px){ .steps{grid-template-columns:1fr 1fr;row-gap:40px} }
+@media (max-width:520px){ .steps{grid-template-columns:1fr;row-gap:32px} }
+
+/* case studies */
+.cases{display:grid;gap:20px}
+.case{display:grid;grid-template-columns:.9fr 1.1fr;background:var(--ink-2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.case .head{padding:32px;border-inline-end:1px solid var(--line);display:flex;flex-direction:column;gap:12px}
+.tag{display:inline-block;align-self:flex-start;font-size:12.5px;font-weight:500;color:var(--gold);border:1px solid var(--gold-soft);border-radius:999px;padding:3px 12px}
+.case h3{font-family:var(--display);font-weight:600;font-size:clamp(24px,3vw,30px);line-height:1.15}
+.case .one{color:var(--muted)}
+.case .metric{margin-top:auto;padding-top:18px}
+.case .metric b{display:block;font-family:var(--display);font-size:30px;font-weight:600;color:var(--gold);line-height:1.1}
+.case .metric span{font-size:14px;color:var(--muted)}
+.case .body{padding:32px;display:grid;gap:18px;align-content:start}
+.case dt{font-size:13px;font-weight:600;color:var(--text);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+html[lang="ar"] .case dt{letter-spacing:0;text-transform:none;font-size:14px}
+.case dd{color:var(--muted);font-size:15.5px}
+@media (max-width:820px){
+  .case{grid-template-columns:1fr}
+  .case .head{border-inline-end:0;border-bottom:1px solid var(--line);padding:24px}
+  .case .body{padding:24px}
+}
+.more-h{font-family:var(--display);font-weight:600;font-size:22px;margin:64px 0 20px}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.proj{border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s}
+.proj:hover{border-color:#3A4150}
+.proj .top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.proj h4{font-family:var(--display);font-weight:600;font-size:19px}
+.state{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 10px;white-space:nowrap}
+.state.pub{color:#8FD9AE;border-color:#5BC98A44}
+.proj p{color:var(--muted);font-size:15px;flex:1}
+@media (max-width:900px){ .projects{grid-template-columns:1fr 1fr} }
+@media (max-width:600px){ .projects{grid-template-columns:1fr} }
+
+/* engagement */
+.engage{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.plan{border:1px solid var(--line);border-radius:14px;padding:30px;display:flex;flex-direction:column;gap:12px}
+.plan.hl{border-color:var(--gold);background:linear-gradient(180deg,#C9A45C0F,transparent 60%)}
+.plan h3{font-family:var(--display);font-weight:600;font-size:22px}
+.plan .best{font-size:14px;color:var(--gold)}
+.plan p{color:var(--muted);font-size:15.5px}
+.plan ul{list-style:none;display:grid;gap:8px;font-size:15px;margin:6px 0 10px}
+.plan li{padding-inline-start:20px;position:relative}
+.plan li::before{content:"";position:absolute;inset-inline-start:0;top:.75em;width:8px;height:1px;background:var(--gold)}
+.plan .btn{margin-top:auto;text-align:center;font-size:15px;padding:11px 18px}
+@media (max-width:860px){ .engage{grid-template-columns:1fr} }
 
 /* about */
 .about{display:grid;grid-template-columns:1.2fr .8fr;gap:56px}
 .about p{max-width:62ch;margin-bottom:18px}
-.facts{border-inline-start:1px solid var(--gold);padding-inline-start:28px;display:grid;gap:22px;align-content:start}
+.facts{border-inline-start:1px solid var(--gold);padding-inline-start:28px;display:grid;gap:20px;align-content:start}
 .facts dt{font-size:14px;color:var(--muted)}
 .facts dd{font-weight:500}
 @media (max-width:820px){ .about{grid-template-columns:1fr;gap:36px} }
 
-/* services: a ruled two-column list, not cards */
-.services{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
-.svc{padding:28px 0;border-top:1px solid var(--line)}
-.svc h3{font-family:var(--display);font-weight:600;font-size:22px;margin-bottom:8px;display:flex;align-items:center;gap:12px}
-.svc h3 svg{flex:none;width:22px;height:22px;stroke:var(--gold)}
-.svc p{color:var(--muted);margin-bottom:12px}
-.tools{font-family:var(--mono);font-size:13px;color:var(--gold)}
-html[lang="ar"] .tools{direction:ltr;text-align:right}
-@media (max-width:760px){ .services{grid-template-columns:1fr} }
-
-/* work: expandable rows */
-.work{border-top:1px solid var(--line)}
-.work details{border-bottom:1px solid var(--line)}
-.work summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto 28px;gap:24px;align-items:baseline;padding:26px 4px}
-.work summary::-webkit-details-marker{display:none}
-.work summary:hover .pname{color:var(--gold)}
-.pname{font-family:var(--display);font-weight:600;font-size:clamp(22px,3vw,30px);transition:color .2s}
-.pone{display:block;font-family:var(--body);font-weight:400;font-size:16px;color:var(--muted);margin-top:4px}
-.ptag{font-size:14px;color:var(--muted);white-space:nowrap}
-.plus{width:28px;height:28px;position:relative;align-self:center}
-.plus::before,.plus::after{content:"";position:absolute;inset:13px 4px;background:var(--gold);border-radius:2px;transition:transform .25s}
-.plus::after{transform:rotate(90deg)}
-details[open] .plus::after{transform:rotate(0)}
-.pbody{padding:0 4px 30px;display:grid;grid-template-columns:1.3fr .7fr;gap:40px;animation:open .3s ease}
-@keyframes open{from{opacity:0;transform:translateY(-6px)}}
-.pbody ul{list-style:none;display:grid;gap:10px}
-.pbody li{padding-inline-start:20px;position:relative}
-.pbody li::before{content:"";position:absolute;inset-inline-start:0;top:.7em;width:8px;height:1px;background:var(--gold)}
-.pmeta{display:grid;gap:12px;align-content:start}
-.pstate{font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 12px;justify-self:start}
-html[lang="ar"] .pstate{justify-self:start}
-.pstate.live{color:var(--text);border-color:var(--gold-soft)}
-@media (max-width:760px){
-  .work summary{grid-template-columns:1fr 28px}
-  .ptag{display:none}
-  .pbody{grid-template-columns:1fr;gap:20px}
-}
-
-/* timeline: a real sequence */
-.timeline{list-style:none;display:grid;gap:0;border-inline-start:1px solid var(--line);margin-inline-start:6px}
+/* timeline */
+.timeline{list-style:none;display:grid;border-inline-start:1px solid var(--line);margin-inline-start:6px}
 .timeline li{position:relative;padding:0 0 36px 32px}
 html[lang="ar"] .timeline li{padding:0 32px 36px 0}
 .timeline li::before{content:"";position:absolute;inset-inline-start:-6px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--ink);border:2px solid var(--gold)}
@@ -142,20 +195,42 @@ html[lang="ar"] .timeline li{padding:0 32px 36px 0}
 .certs{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
 .certs span{font-size:14px;border:1px solid var(--line);border-radius:999px;padding:5px 14px;color:var(--text)}
 
+/* faq */
+.faq{border-top:1px solid var(--line);max-width:820px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:22px 2px;font-family:var(--display);font-weight:600;font-size:19px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--gold)}
+.plus{flex:none;width:22px;height:22px;position:relative;margin-top:3px}
+.plus::before,.plus::after{content:"";position:absolute;inset:10px 3px;background:var(--gold);border-radius:2px;transition:transform .25s}
+.plus::after{transform:rotate(90deg)}
+details[open] .plus::after{transform:rotate(0)}
+.faq p{color:var(--muted);padding:0 2px 24px;max-width:68ch}
+
 /* contact */
-.contact{text-align:start}
-.contact h2{font-size:clamp(34px,5vw,56px);max-width:18ch;line-height:1.1}
-.clist{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0;margin-top:44px;border-top:1px solid var(--line)}
-.citem{padding:22px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:4px;text-decoration:none}
+.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact h2{font-size:clamp(32px,4.6vw,52px);max-width:16ch}
+.clist{display:grid;gap:0;margin-top:32px;border-top:1px solid var(--line)}
+.citem{padding:18px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;text-decoration:none}
 .citem small{font-size:14px;color:var(--muted)}
-.citem b{font-weight:500;direction:ltr;unicode-bidi:isolate;overflow-wrap:anywhere}
-html[lang="ar"] .citem b{text-align:right}
-a.citem:hover b, .citem a:hover b{color:var(--gold)}
-.citem a{text-decoration:none}
-.copy{align-self:flex-start;margin-top:6px;background:none;border:1px solid var(--line);color:var(--muted);font:500 13px var(--body);padding:4px 12px;border-radius:6px;cursor:pointer}
-.copy:hover{border-color:var(--gold);color:var(--text)}
+.citem b{font-weight:500;direction:ltr;unicode-bidi:isolate;overflow-wrap:anywhere;text-align:end}
+a.citem:hover b{color:var(--gold)}
+form{background:var(--ink-2);border:1px solid var(--line);border-radius:14px;padding:30px;display:grid;gap:16px}
+form h3{font-family:var(--display);font-weight:600;font-size:22px}
+form .note{font-size:14px;color:var(--muted);margin-top:-8px}
+label{display:grid;gap:6px;font-size:14px;color:var(--muted)}
+input,select,textarea{font:inherit;font-size:16px;color:var(--text);background:var(--ink);border:1px solid var(--line);border-radius:8px;padding:11px 13px;width:100%}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form .btn{justify-self:start}
+@media (max-width:860px){ .contact .grid{grid-template-columns:1fr;gap:40px} }
+@media (max-width:480px){ .row2{grid-template-columns:1fr} form{padding:22px} }
+
 footer{padding:36px 0;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{text-decoration:none}
+footer a:hover{color:var(--gold)}
 </style>
 </head>
 <body>
@@ -164,20 +239,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   <div class="wrap bar">
     <a class="brand" href="#top" aria-label="Amir Salah, home">
       <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#as"/></svg>
-      <span class="en">Amir Salah</span><span class="ar">أمير صلاح</span>
+      <span><span class="en">Amir Salah</span><span class="ar">أمير صلاح</span>
+      <small><span class="en">Freelance developer</span><span class="ar">مطوّر مستقل</span></small></span>
     </a>
     <nav aria-label="Sections">
+      <a href="#services"><span class="en">Services</span><span class="ar">الخدمات</span></a>
+      <a href="#work"><span class="en">Work</span><span class="ar">الأعمال</span></a>
+      <a href="#process"><span class="en">Process</span><span class="ar">طريقة العمل</span></a>
       <a href="#about"><span class="en">About</span><span class="ar">عنّي</span></a>
-      <a href="#services"><span class="en">Services</span><span class="ar">خدماتي</span></a>
-      <a href="#work"><span class="en">Work</span><span class="ar">أعمالي</span></a>
-      <a href="#experience"><span class="en">Experience</span><span class="ar">خبرتي</span></a>
-      <a href="#contact"><span class="en">Contact</span><span class="ar">تواصل</span></a>
+      <a href="#experience"><span class="en">Experience</span><span class="ar">الخبرة</span></a>
       <button class="lang" id="lang" type="button" aria-label="Switch language">عربي</button>
+      <a class="hire" href="#contact"><span class="en">Hire me</span><span class="ar">اطلب خدمة</span></a>
     </nav>
   </div>
 </header>
 
-<!-- logo symbol, reused in header -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="as" viewBox="0 0 100 100">
     <circle cx="50" cy="50" r="47" stroke="#C9A45C" stroke-width="1.6" fill="#0E1116"/>
@@ -186,32 +262,30 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     <path d="M68 30 C64 21 52 19 45 22 C36 26 36 37 44 42 C52 47 64 50 64 62 C64 74 50 79 40 75 C33 72 31 65 36 62 C40 60 43 64 40 67" stroke="#0E1116" stroke-width="9" stroke-linecap="round" fill="none"/>
     <path d="M68 30 C64 21 52 19 45 22 C36 26 36 37 44 42 C52 47 64 50 64 62 C64 74 50 79 40 75 C33 72 31 65 36 62 C40 60 43 64 40 67" stroke="#F2EFE8" stroke-width="4" stroke-linecap="round" fill="none"/>
   </symbol>
-</svg>
 
 <main id="top">
   <div class="hero">
     <div class="wrap">
-      <div>
-        <p class="status"><i></i>
-          <span class="en">Available for freelance work and full-time roles, remote or on-site</span>
-          <span class="ar">متاح لمشاريع فريلانس ولوظائف بدوام كامل، عن بُعد أو في الموقع</span>
-        </p>
-        <h1><span class="en">Amir Salah</span><span class="ar">أمير صلاح</span></h1>
-        <p class="lede">
-          <span class="en">I turn data into decisions and ideas into software that works.</span>
-          <span class="ar">أحوّل البيانات إلى قرارات، والأفكار إلى برامج تعمل فعلاً.</span>
-        </p>
-        <p class="sub">
-          <span class="en">Freelance developer based in Aqaba, Jordan. I build data dashboards, machine learning models and Python web apps for businesses and teams.</span>
-          <span class="ar">مطوّر فريلانس من العقبة، الأردن. أبني لوحات بيانات ونماذج ذكاء اصطناعي وتطبيقات ويب بلغة بايثون للشركات والفرق.</span>
-        </p>
-        <div class="ctas">
-          <a class="btn primary" href="#contact"><span class="en">Start a project</span><span class="ar">ابدأ مشروعك</span></a>
-          <a class="btn ghost" href="#work"><span class="en">See my work</span><span class="ar">شاهد أعمالي</span></a>
+      <div class="grid">
+        <div>
+          <p class="status"><i></i>
+            <span class="en">Taking new projects for December 2026</span>
+            <span class="ar">أستقبل مشاريع جديدة لشهر كانون الأول 2026</span>
+          </p>
+          <h1>
+            <span class="en">Dashboards, AI models and business systems that <em>actually get used.</em></span>
+            <span class="ar">لوحات بيانات ونماذج ذكاء اصطناعي وأنظمة أعمال <em>تُستخدم فعلاً.</em></span>
+          </h1>
+          <p class="sub">
+            <span class="en">I'm Amir, a freelance data and Python developer in Aqaba, Jordan. I help gyms, clinics, rental offices and growing teams turn their data into clear reports and replace spreadsheets with software they can run every day. I work remotely with clients in Arabic and English.</span>
+            <span class="ar">أنا أمير، مطوّر بيانات وبايثون مستقل من العقبة، الأردن. أساعد الأندية الرياضية والعيادات ومكاتب التأجير والفرق النامية على تحويل بياناتها إلى تقارير واضحة، واستبدال جداول Excel ببرامج تستخدمها كل يوم. أعمل عن بُعد مع العملاء بالعربية والإنجليزية.</span>
+          </p>
+          <div class="ctas">
+            <a class="btn primary" href="#contact"><span class="en">Get a free quote</span><span class="ar">احصل على عرض سعر مجاني</span></a>
+            <a class="btn ghost" href="#work"><span class="en">See case studies</span><span class="ar">شاهد الأعمال</span></a>
+          </div>
         </div>
-      </div>
-
-      <svg class="mark" viewBox="0 0 100 100" role="img" aria-label="AS monogram">
+        <svg class="mark" viewBox="0 0 100 100" role="img" aria-label="AS monogram">
         <circle class="draw" pathLength="1" cx="50" cy="50" r="47" stroke="#C9A45C" stroke-width=".9" fill="none" transform="rotate(-90 50 50)"/>
         <circle class="draw" pathLength="1" cx="50" cy="50" r="44" stroke="#C9A45C" stroke-width=".35" fill="none" opacity=".7" transform="rotate(90 50 50)"/>
         <path class="fade f1" d="M50 1.2 L52.3 3.5 L50 5.8 L47.7 3.5 Z" fill="#C9A45C"/>
@@ -227,58 +301,70 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
         <path class="draw d2" pathLength="1" d="M41 39 C49 46 62 49 63 58" stroke="#F2EFE8" stroke-width="5.2" stroke-linecap="round" fill="none"/>
         <circle class="fade f3" cx="68" cy="30" r="2.8" fill="#F2EFE8"/>
       </svg>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="wrap">
-      <h2><span class="en">About me</span><span class="ar">من أنا</span></h2>
-      <div class="about">
-        <div>
-          <p class="en">I'm a Computer Science and Artificial Intelligence graduate from Aqaba University of Technology. I like problems where the answer is hiding in data, and I like shipping tools that people actually use.</p>
-          <p class="ar">أنا خريج علوم الحاسوب والذكاء الاصطناعي من جامعة العقبة للتكنولوجيا. أحب المشكلات التي يختبئ حلّها داخل البيانات، وأحب أن أسلّم أدوات يستخدمها الناس فعلاً.</p>
-          <p class="en">I've delivered a management system to a paying client, built a medical imaging classifier, and written a scheduling engine that plans a full semester for over a thousand students in under 20 seconds. I work mostly in Python and SQL, and I explain my work in plain language.</p>
-          <p class="ar">سلّمت نظام إدارة لعميل، وبنيت نموذجاً لتصنيف صور الرنين المغناطيسي، وكتبت محرّك جداول يخطط فصلاً دراسياً كاملاً لأكثر من ألف طالب في أقل من 20 ثانية. أعمل غالباً بلغتي Python وSQL، وأشرح عملي بلغة واضحة.</p>
-          <p class="en">I'm looking for Data Analyst, Data Engineer and Machine Learning Engineer roles, and I take on freelance projects alongside.</p>
-          <p class="ar">أبحث عن وظائف محلل بيانات أو مهندس بيانات أو مهندس تعلّم آلة، وأعمل على مشاريع فريلانس في الوقت نفسه.</p>
-        </div>
-        <dl class="facts">
-          <div><dt><span class="en">Based in</span><span class="ar">مكان الإقامة</span></dt><dd><span class="en">Aqaba, Jordan</span><span class="ar">العقبة، الأردن</span></dd></div>
-          <div><dt><span class="en">Open to relocating</span><span class="ar">مستعد للانتقال إلى</span></dt><dd><span class="en">UAE, Saudi Arabia, Qatar, Kuwait, Canada, Australia, or remote</span><span class="ar">الإمارات، السعودية، قطر، الكويت، كندا، أستراليا، أو العمل عن بُعد</span></dd></div>
-          <div><dt><span class="en">Education</span><span class="ar">التعليم</span></dt><dd><span class="en">BSc Computer Science &amp; AI, June 2026</span><span class="ar">بكالوريوس علوم الحاسوب والذكاء الاصطناعي، حزيران 2026</span></dd></div>
-          <div><dt><span class="en">Languages</span><span class="ar">اللغات</span></dt><dd><span class="en">Arabic, English, Russian</span><span class="ar">العربية، الإنجليزية، الروسية</span></dd></div>
-          <div><dt><span class="en">Main tools</span><span class="ar">أدواتي الأساسية</span></dt><dd>Python, SQL, Flask, PyTorch, Excel</dd></div>
-        </dl>
+      </div>
+      <div class="proof">
+        <div><b>1,012</b><span class="en">students scheduled in under 20 seconds</span><span class="ar">طالباً جُدولت موادهم في أقل من 20 ثانية</span></div>
+        <div><b>9</b><span class="en">projects built, from client systems to AI research</span><span class="ar">مشاريع، من أنظمة لعملاء إلى أبحاث ذكاء اصطناعي</span></div>
+        <div><b><span class="en">24 h</span><span class="ar">24 ساعة</span></b><span class="en">usual reply time on new enquiries</span><span class="ar">مدة الرد المعتادة على الطلبات الجديدة</span></div>
+        <div><b><span class="en">AR / EN</span><span class="ar">عربي / EN</span></b><span class="en">clear communication in both, plus Russian</span><span class="ar">تواصل واضح باللغتين، إضافة إلى الروسية</span></div>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- SERVICES -->
   <section id="services">
     <div class="wrap">
-      <h2><span class="en">What I can do for you</span><span class="ar">ماذا أقدّم لك</span></h2>
-      <p class="intro"><span class="en">Fixed-scope projects or ongoing work. Tell me the problem and I'll suggest the simplest thing that solves it.</span><span class="ar">مشاريع بنطاق محدد أو عمل مستمر. أخبرني بالمشكلة وسأقترح أبسط حل لها.</span></p>
+      <p class="eyebrow"><span class="en">Services</span><span class="ar">الخدمات</span></p>
+      <h2><span class="en">What I can build for your business</span><span class="ar">ماذا أستطيع أن أبني لعملك</span></h2>
+      <p class="intro"><span class="en">Every project starts with your problem, not a technology. You get working software, the source code and a short walkthrough so your team can use it from day one.</span><span class="ar">كل مشروع يبدأ من مشكلتك، لا من التقنية. تستلم برنامجاً يعمل، مع الكود المصدري وشرح مختصر ليستخدمه فريقك من اليوم الأول.</span></p>
       <div class="services">
         <div class="svc">
-          <h3><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span class="en">Data analysis &amp; dashboards</span><span class="ar">تحليل البيانات ولوحات المتابعة</span></h3>
-          <p><span class="en">Clean up messy spreadsheets and databases, find what the numbers are saying, and give you a dashboard you can check every morning.</span><span class="ar">أنظّف الجداول وقواعد البيانات، وأستخرج ما تقوله الأرقام، وأسلّمك لوحة متابعة تراجعها كل صباح.</span></p>
-          <p class="tools">SQL · Excel · Python · Cognos</p>
-        </div>
-        <div class="svc">
-          <h3><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14l-2 2 2 2M14 14l2 2-2 2"/></svg><span class="en">Web apps &amp; management systems</span><span class="ar">تطبيقات ويب وأنظمة إدارة</span></h3>
-          <p><span class="en">Booking, membership, rental or reporting systems for gyms, clinics, rental offices and other small businesses, with a proper database behind them and deployed online.</span><span class="ar">أنظمة حجوزات أو اشتراكات أو تأجير أو تقارير للأندية الرياضية والعيادات ومكاتب التأجير وغيرها من الأعمال الصغيرة، مع قاعدة بيانات حقيقية ونشرها على الإنترنت.</span></p>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14l-2 2 2 2M14 14l2 2-2 2"/></svg></div>
+          <h3><span class="en">Management systems</span><span class="ar">أنظمة الإدارة</span></h3>
+          <p><span class="en">Custom web systems that replace paper, spreadsheets and WhatsApp lists.</span><span class="ar">أنظمة ويب مخصصة تستبدل الورق وجداول Excel وقوائم الواتساب.</span></p>
+          <ul>
+            <li><span class="en">Members, bookings, rentals, payments and invoices</span><span class="ar">الأعضاء والحجوزات والتأجير والدفعات والفواتير</span></li>
+            <li><span class="en">Admin view you can check from your phone</span><span class="ar">لوحة إدارة تتابعها من هاتفك</span></li>
+            <li><span class="en">Deployed online with a real database behind it</span><span class="ar">منشور على الإنترنت مع قاعدة بيانات حقيقية</span></li>
+          </ul>
           <p class="tools">Flask · PostgreSQL · SQLite · SQL Server</p>
+          <p class="for"><b><span class="en">Good for:</span><span class="ar">مناسب لـ:</span></b> <span class="en">gyms, clinics, car rental offices, small shops</span><span class="ar">الأندية الرياضية، العيادات، مكاتب تأجير السيارات، المحلات الصغيرة</span></p>
         </div>
         <div class="svc">
-          <h3><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round"><circle cx="5" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><path d="M7 7l3 4M7 17l3-4M14 12h3"/></svg><span class="en">Machine learning models</span><span class="ar">نماذج تعلّم الآلة</span></h3>
-          <p><span class="en">Classification and prediction models, image recognition, recommenders and chatbots, built into an app your team can use rather than left in a notebook.</span><span class="ar">نماذج تصنيف وتنبؤ، وتمييز صور، وأنظمة توصية، وروبوتات محادثة، مدمجة في تطبيق يستخدمه فريقك بدلاً من أن تبقى في ملف تجارب.</span></p>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+          <h3><span class="en">Data analysis and dashboards</span><span class="ar">تحليل البيانات ولوحات المتابعة</span></h3>
+          <p><span class="en">Find out what your numbers are telling you, and keep watching them without extra work.</span><span class="ar">اعرف ما تقوله أرقامك، وتابعها باستمرار دون جهد إضافي.</span></p>
+          <ul>
+            <li><span class="en">Cleaning and merging messy Excel files and databases</span><span class="ar">تنظيف ودمج ملفات Excel وقواعد البيانات غير المرتبة</span></li>
+            <li><span class="en">Sales, customer and churn analysis with a written summary</span><span class="ar">تحليل المبيعات والعملاء وفقدان العملاء مع ملخص مكتوب</span></li>
+            <li><span class="en">Dashboards and automatic PDF reports</span><span class="ar">لوحات متابعة وتقارير PDF تلقائية</span></li>
+          </ul>
+          <p class="tools">Python · SQL · Excel · Cognos · ReportLab</p>
+          <p class="for"><b><span class="en">Good for:</span><span class="ar">مناسب لـ:</span></b> <span class="en">owners and managers who need answers, not raw data</span><span class="ar">المالكين والمدراء الذين يحتاجون إجابات لا بيانات خام</span></p>
+        </div>
+        <div class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round"><circle cx="5" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><path d="M7 7l3 4M7 17l3-4M14 12h3"/></svg></div>
+          <h3><span class="en">Machine learning and AI features</span><span class="ar">تعلّم الآلة وميزات الذكاء الاصطناعي</span></h3>
+          <p><span class="en">Models that do a real job inside an app, not a notebook nobody opens again.</span><span class="ar">نماذج تؤدي عملاً حقيقياً داخل تطبيق، لا ملف تجارب لا يفتحه أحد.</span></p>
+          <ul>
+            <li><span class="en">Prediction and classification, including images</span><span class="ar">التنبؤ والتصنيف، بما فيه تصنيف الصور</span></li>
+            <li><span class="en">Recommenders and chatbots trained on your content</span><span class="ar">أنظمة توصية وروبوتات محادثة مبنية على محتواك</span></li>
+            <li><span class="en">AI assistants connected to the Claude API</span><span class="ar">مساعدات ذكية مرتبطة بـ Claude API</span></li>
+          </ul>
           <p class="tools">PyTorch · TensorFlow · scikit-learn · NLTK</p>
+          <p class="for"><b><span class="en">Good for:</span><span class="ar">مناسب لـ:</span></b> <span class="en">teams with data they are not using yet</span><span class="ar">الفرق التي تملك بيانات لا تستفيد منها بعد</span></p>
         </div>
         <div class="svc">
-          <h3><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg><span class="en">Automation &amp; desktop tools</span><span class="ar">الأتمتة وبرامج سطح المكتب</span></h3>
-          <p><span class="en">Scripts and bots that do the repetitive work: generating reports and PDFs, pulling data on a schedule, voice and desktop assistants.</span><span class="ar">سكربتات وبوتات تنجز العمل المتكرر: إنشاء التقارير وملفات PDF، وجلب البيانات بشكل دوري، ومساعدات صوتية ولسطح المكتب.</span></p>
-          <p class="tools">Python · PyQt · Docker · Linux</p>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
+          <h3><span class="en">Automation and bots</span><span class="ar">الأتمتة والبوتات</span></h3>
+          <p><span class="en">Scripts that take repetitive work off your team's plate.</span><span class="ar">سكربتات ترفع العمل المتكرر عن فريقك.</span></p>
+          <ul>
+            <li><span class="en">Scheduled data collection and web scraping</span><span class="ar">جمع البيانات من الويب بشكل دوري</span></li>
+            <li><span class="en">Reports and documents generated automatically</span><span class="ar">تقارير ومستندات تُنشأ تلقائياً</span></li>
+            <li><span class="en">Running on a server with Docker, so it keeps going</span><span class="ar">تعمل على سيرفر باستخدام Docker لتستمر دون توقف</span></li>
+          </ul>
+          <p class="tools">Python · Docker · Linux · PyQt</p>
+          <p class="for"><b><span class="en">Good for:</span><span class="ar">مناسب لـ:</span></b> <span class="en">anyone copying and pasting the same thing every week</span><span class="ar">كل من ينسخ ويلصق الشيء نفسه كل أسبوع</span></p>
         </div>
       </div>
     </div>
@@ -287,139 +373,172 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   <!-- WORK -->
   <section id="work">
     <div class="wrap">
-      <h2><span class="en">Selected work</span><span class="ar">أعمال مختارة</span></h2>
-      <p class="intro"><span class="en">Nine projects, from client work to research. Open any of them to see what it does and how it's built.</span><span class="ar">تسعة مشاريع، من أعمال لعملاء إلى مشاريع بحثية. افتح أي مشروع لترى ماذا يفعل وكيف بُني.</span></p>
-      <div class="work">
+      <p class="eyebrow"><span class="en">Work</span><span class="ar">الأعمال</span></p>
+      <h2><span class="en">Case studies</span><span class="ar">نماذج من أعمالي</span></h2>
+      <p class="intro"><span class="en">A client system, a university tool and a medical AI app. What the problem was, what I built and how it turned out.</span><span class="ar">نظام لعميل، وأداة لجامعة، وتطبيق ذكاء اصطناعي طبي. ما المشكلة، وماذا بنيت، وما النتيجة.</span></p>
 
-        <details open>
-          <summary><span><span class="pname">NeuroScope</span><span class="pone"><span class="en">Brain MRI tumor classification web app</span><span class="ar">تطبيق ويب لتصنيف أورام الدماغ من صور الرنين المغناطيسي</span></span></span><span class="ptag"><span class="en">Machine learning</span><span class="ar">تعلّم الآلة</span></span><span class="plus" aria-hidden="true"></span></summary>
-          <div class="pbody">
-            <ul>
-              <li><span class="en">Upload an MRI scan and get a tumor classification from an EfficientNetB0 neural network.</span><span class="ar">ارفع صورة رنين لتحصل على تصنيف الورم من شبكة EfficientNetB0 العصبية.</span></li>
-              <li><span class="en">Grad-CAM heatmaps show which part of the image the model looked at, so the result can be checked, not just trusted.</span><span class="ar">خرائط Grad-CAM الحرارية توضّح أي جزء من الصورة اعتمد عليه النموذج، ليمكن التحقق من النتيجة.</span></li>
-              <li><span class="en">Built-in AI assistant answers questions about the result. Scans and results are stored in PostgreSQL.</span><span class="ar">مساعد ذكاء اصطناعي مدمج يجيب عن الأسئلة حول النتيجة، وتُحفظ الصور والنتائج في PostgreSQL.</span></li>
-            </ul>
-            <div class="pmeta">
-              <p class="tools">Python · Flask · EfficientNetB0 · Grad-CAM · PostgreSQL · Claude API</p>
-              <span class="pstate"><span class="en">Apr to May 2026</span><span class="ar">نيسان إلى أيار 2026</span></span>
-            </div>
+      <div class="cases">
+        <article class="case">
+          <div class="head">
+            <span class="tag"><span class="en">Client project</span><span class="ar">مشروع لعميل</span></span>
+            <h3>Body Power Gym</h3>
+            <p class="one"><span class="en">Gym management system for a paying client.</span><span class="ar">نظام إدارة نادٍ رياضي لعميل.</span></p>
+            <div class="metric"><b><span class="en">Live</span><span class="ar">يعمل</span></b><span class="en">deployed online and used by the client</span><span class="ar">منشور على الإنترنت ويستخدمه العميل</span></div>
           </div>
-        </details>
+          <dl class="body">
+            <div><dt><span class="en">The problem</span><span class="ar">المشكلة</span></dt><dd><span class="en">The gym needed one place to manage members, subscriptions and payments instead of keeping track by hand.</span><span class="ar">احتاج النادي إلى مكان واحد لإدارة الأعضاء والاشتراكات والدفعات بدلاً من المتابعة اليدوية.</span></dd></div>
+            <div><dt><span class="en">What I built</span><span class="ar">ماذا بنيت</span></dt><dd><span class="en">A Flask web app with an SQLite database, hosted online, plus activation-key licensing that protects the software until the project is paid in full.</span><span class="ar">تطبيق ويب بـ Flask مع قاعدة بيانات SQLite منشور على الإنترنت، مع نظام ترخيص بمفتاح تفعيل يحمي البرنامج حتى اكتمال الدفع.</span></dd></div>
+            <div><dt><span class="en">The result</span><span class="ar">النتيجة</span></dt><dd><span class="en">Delivered under a written service contract and in use by the client.</span><span class="ar">سُلِّم بموجب عقد خدمة مكتوب ويستخدمه العميل.</span></dd></div>
+            <p class="tools">Python · Flask · SQLite · PythonAnywhere</p>
+          </dl>
+        </article>
 
-        <details>
-          <summary><span><span class="pname">UniPlan</span><span class="pone"><span class="en">Semester schedule generator for a university</span><span class="ar">مولّد جداول الفصل الدراسي للجامعة</span></span></span><span class="ptag"><span class="en">Data engineering</span><span class="ar">هندسة البيانات</span></span><span class="plus" aria-hidden="true"></span></summary>
-          <div class="pbody">
-            <ul>
-              <li><span class="en">Planned schedules for 1,012 students across 42 courses and 58 sections in under 20 seconds.</span><span class="ar">خطّط جداول 1,012 طالباً على 42 مادة و58 شعبة في أقل من 20 ثانية.</span></li>
-              <li><span class="en">Rule-based ETL engine reads from SQL Server and exports ready-to-print PDF schedules.</span><span class="ar">محرّك ETL قائم على القواعد يقرأ من SQL Server ويصدّر جداول PDF جاهزة للطباعة.</span></li>
-              <li><span class="en">Team project, supervised by Dr. Anas AL-Bdareen.</span><span class="ar">مشروع جماعي بإشراف د. أنس البداريين.</span></li>
-            </ul>
-            <div class="pmeta">
-              <p class="tools">Python 3.12 · SQL Server · pyodbc · Eel · ReportLab</p>
-            </div>
+        <article class="case">
+          <div class="head">
+            <span class="tag"><span class="en">Data engineering</span><span class="ar">هندسة البيانات</span></span>
+            <h3>UniPlan</h3>
+            <p class="one"><span class="en">Semester schedule generator for a university.</span><span class="ar">مولّد جداول الفصل الدراسي لجامعة.</span></p>
+            <div class="metric"><b><span class="en">Under 20 s</span><span class="ar">أقل من 20 ثانية</span></b><span class="en">to schedule 1,012 students</span><span class="ar">لجدولة 1,012 طالباً</span></div>
           </div>
-        </details>
+          <dl class="body">
+            <div><dt><span class="en">The problem</span><span class="ar">المشكلة</span></dt><dd><span class="en">Building a full semester timetable by hand takes days and clashes are easy to miss.</span><span class="ar">بناء جدول فصل كامل يدوياً يستغرق أياماً، ومن السهل أن تفوت التعارضات.</span></dd></div>
+            <div><dt><span class="en">What I built</span><span class="ar">ماذا بنيت</span></dt><dd><span class="en">A rule-based engine that reads student and course data from SQL Server, assigns 1,012 students to 58 sections across 42 courses, and exports ready-to-print PDF schedules.</span><span class="ar">محرّك قائم على القواعد يقرأ بيانات الطلاب والمواد من SQL Server، ويوزّع 1,012 طالباً على 58 شعبة في 42 مادة، ويصدّر جداول PDF جاهزة للطباعة.</span></dd></div>
+            <div><dt><span class="en">The result</span><span class="ar">النتيجة</span></dt><dd><span class="en">A full semester planned in under 20 seconds. Team project supervised by Dr. Anas AL-Bdareen.</span><span class="ar">فصل كامل مُخطط في أقل من 20 ثانية. مشروع جماعي بإشراف د. أنس البداريين.</span></dd></div>
+            <p class="tools">Python · SQL Server · pyodbc · Eel · ReportLab</p>
+          </dl>
+        </article>
 
-        <details>
-          <summary><span><span class="pname">Body Power Gym</span><span class="pone"><span class="en">Gym management system for a paying client</span><span class="ar">نظام إدارة نادٍ رياضي لعميل</span></span></span><span class="ptag"><span class="en">Client project</span><span class="ar">مشروع لعميل</span></span><span class="plus" aria-hidden="true"></span></summary>
-          <div class="pbody">
-            <ul>
-              <li><span class="en">Members, subscriptions and payments in one place, built and deployed online for the client.</span><span class="ar">الأعضاء والاشتراكات والدفعات في مكان واحد، مبني ومنشور على الإنترنت للعميل.</span></li>
-              <li><span class="en">Activation-key licensing protects the software until the project is paid in full.</span><span class="ar">نظام ترخيص بمفتاح تفعيل يحمي البرنامج حتى اكتمال الدفع.</span></li>
-              <li><span class="en">Delivered with a written service contract.</span><span class="ar">سُلِّم مع عقد خدمة مكتوب.</span></li>
-            </ul>
-            <div class="pmeta">
-              <p class="tools">Python · Flask · SQLite · PythonAnywhere</p>
-              <span class="pstate live"><span class="en">Public on GitHub</span><span class="ar">منشور على GitHub</span></span>
-            </div>
+        <article class="case">
+          <div class="head">
+            <span class="tag"><span class="en">Machine learning</span><span class="ar">تعلّم الآلة</span></span>
+            <h3>NeuroScope</h3>
+            <p class="one"><span class="en">Brain MRI tumor classification web app, April to May 2026.</span><span class="ar">تطبيق ويب لتصنيف أورام الدماغ من صور الرنين، نيسان إلى أيار 2026.</span></p>
+            <div class="metric"><b>Grad-CAM</b><span class="en">shows why the model decided, not just what</span><span class="ar">يوضّح لماذا قرر النموذج، لا ماذا قرر فقط</span></div>
           </div>
-        </details>
+          <dl class="body">
+            <div><dt><span class="en">The problem</span><span class="ar">المشكلة</span></dt><dd><span class="en">A tumor classifier is only useful if a person can check its answer.</span><span class="ar">مصنّف الأورام لا يفيد إلا إذا استطاع الإنسان التحقق من إجابته.</span></dd></div>
+            <div><dt><span class="en">What I built</span><span class="ar">ماذا بنيت</span></dt><dd><span class="en">An EfficientNetB0 model inside a web app. Grad-CAM heatmaps show which part of the scan the model used, results are stored in PostgreSQL, and a built-in AI assistant answers questions about each result.</span><span class="ar">نموذج EfficientNetB0 داخل تطبيق ويب. خرائط Grad-CAM توضّح أي جزء من الصورة اعتمد عليه النموذج، وتُحفظ النتائج في PostgreSQL، ومساعد ذكي مدمج يجيب عن الأسئلة حول كل نتيجة.</span></dd></div>
+            <div><dt><span class="en">The result</span><span class="ar">النتيجة</span></dt><dd><span class="en">An end-to-end medical imaging tool, from upload to an explained result.</span><span class="ar">أداة تصوير طبي متكاملة، من رفع الصورة حتى نتيجة مشروحة.</span></dd></div>
+            <p class="tools">Python · Flask · EfficientNetB0 · Grad-CAM · PostgreSQL · Claude API</p>
+          </dl>
+        </article>
+      </div>
 
-        <details>
-          <summary><span><span class="pname">Autoway</span><span class="pone"><span class="en">Rent-a-car management system</span><span class="ar">نظام إدارة لمكتب تأجير سيارات</span></span></span><span class="ptag"><span class="en">Business system</span><span class="ar">نظام أعمال</span></span><span class="plus" aria-hidden="true"></span></summary>
-          <div class="pbody">
-            <ul>
-              <li><span class="en">Manages the fleet, bookings and customers for a car rental office.</span><span class="ar">يدير السيارات والحجوزات والعملاء لمكتب تأجير سيارات.</span></li>
-              <li><span class="en">A read-only admin view lets the owner check everything from a phone.</span><span class="ar">واجهة إدارة للقراءة فقط تتيح للمالك متابعة كل شيء من هاتفه.</span></li>
-              <li><span class="en">A public booking website is planned as the next step.</span><span class="ar">موقع حجز للعملاء هو الخطوة القادمة.</span></li>
-            </ul>
-            <div class="pmeta">
-              <span class="pstate"><span class="en">In progress</span><span class="ar">قيد التطوير</span></span>
-            </div>
-          </div>
-        </details>
+      <h3 class="more-h"><span class="en">More projects</span><span class="ar">مشاريع أخرى</span></h3>
+      <div class="projects">
+        <div class="proj">
+          <div class="top"><h4>Autoway</h4><span class="state"><span class="en">In progress</span><span class="ar">قيد التطوير</span></span></div>
+          <p><span class="en">Rent-a-car management system for fleet, bookings and customers. Read-only admin view on the owner's phone, with a booking website planned next.</span><span class="ar">نظام إدارة لمكتب تأجير سيارات يشمل السيارات والحجوزات والعملاء. واجهة إدارة للقراءة فقط على هاتف المالك، وموقع حجز هو الخطوة القادمة.</span></p>
+          <p class="tools"><span class="en">Business system</span><span class="ar">نظام أعمال</span></p>
+        </div>
+        <div class="proj">
+          <div class="top"><h4>stock_bot</h4><span class="state"><span class="en">Private</span><span class="ar">خاص</span></span></div>
+          <p><span class="en">Stock screener that scores companies with the Piotroski F-score and Altman Z-score and summarizes the news. Runs in Docker on my own Ubuntu server. Analysis only, no buy or sell signals.</span><span class="ar">أداة فرز أسهم تقيّم الشركات بمؤشري Piotroski F-score وAltman Z-score وتلخّص الأخبار. تعمل داخل Docker على سيرفر Ubuntu خاص بي. تحليل فقط، دون توصيات بيع أو شراء.</span></p>
+          <p class="tools">Python · yfinance · Docker</p>
+        </div>
+        <div class="proj">
+          <div class="top"><h4>Data Science Portfolio</h4><span class="state pub"><span class="en">Public</span><span class="ar">منشور</span></span></div>
+          <p><span class="en">Churn prediction, heart disease classification, Apriori market-basket analysis, a MovieLens recommender, SQLite work and web scraping.</span><span class="ar">التنبؤ بفقدان العملاء، وتصنيف أمراض القلب، وتحليل سلة المشتريات بـ Apriori، ونظام توصية أفلام من MovieLens، واستعلامات SQLite، وجمع بيانات من الويب.</span></p>
+          <p class="tools">Python · SQLite · Apriori</p>
+          <a class="tools" href="https://github.com/amirsalla7" target="_blank" rel="noopener" style="text-decoration:none"><span class="en">View on GitHub</span><span class="ar">على GitHub</span></a>
+        </div>
+        <div class="proj">
+          <div class="top"><h4>NLTK Chatbot</h4><span class="state pub"><span class="en">Public</span><span class="ar">منشور</span></span></div>
+          <p><span class="en">Retrieval chatbot that answers from BBC News, a medical Q&amp;A set and Wikipedia, matching questions with TF-IDF and cosine similarity.</span><span class="ar">روبوت محادثة يجيب من أخبار BBC ومجموعة أسئلة طبية وويكيبيديا، ويطابق الأسئلة باستخدام TF-IDF وتشابه جيب التمام.</span></p>
+          <p class="tools">Python · NLTK · TF-IDF</p>
+          <a class="tools" href="https://github.com/amirsalla7" target="_blank" rel="noopener" style="text-decoration:none"><span class="en">View on GitHub</span><span class="ar">على GitHub</span></a>
+        </div>
+        <div class="proj">
+          <div class="top"><h4>Jarvis</h4><span class="state"><span class="en">Private</span><span class="ar">خاص</span></span></div>
+          <p><span class="en">Arabic and English desktop voice assistant. Understands 29 spoken commands through a custom intent engine, speaks back, and uses the Claude API for open questions.</span><span class="ar">مساعد صوتي لسطح المكتب بالعربية والإنجليزية. يفهم 29 أمراً صوتياً عبر محرّك نوايا مخصص، ويردّ بالصوت، ويستخدم Claude API للأسئلة المفتوحة.</span></p>
+          <p class="tools">Python · Claude API · PyQt</p>
+        </div>
+        <div class="proj">
+          <div class="top"><h4>Fly Brain Pianist</h4><span class="state"><span class="en">In progress</span><span class="ar">قيد التطوير</span></span></div>
+          <p><span class="en">Research project: a simulation of the MaleCNS fruit fly connectome, trained with reinforcement learning to play piano.</span><span class="ar">مشروع بحثي: محاكاة لشبكة MaleCNS العصبية لذبابة الفاكهة، مدرَّبة بالتعلّم المعزّز على العزف على البيانو.</span></p>
+          <p class="tools">Python · PyTorch · RL</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <details>
-          <summary><span><span class="pname">stock_bot</span><span class="pone"><span class="en">Stock screening and company health scoring</span><span class="ar">فرز الأسهم وتقييم الصحة المالية للشركات</span></span></span><span class="ptag"><span class="en">Data &amp; automation</span><span class="ar">بيانات وأتمتة</span></span><span class="plus" aria-hidden="true"></span></summary>
-          <div class="pbody">
-            <ul>
-              <li><span class="en">Pulls market data, scores companies with the Piotroski F-score and Altman Z-score, and summarizes the news.</span><span class="ar">يجلب بيانات السوق، ويقيّم الشركات بمؤشري Piotroski F-score وAltman Z-score، ويلخّص الأخبار.</span></li>
-              <li><span class="en">Runs in Docker on my own Ubuntu server, which I set up and manage over SSH.</span><span class="ar">يعمل داخل Docker على سيرفر Ubuntu خاص بي أعددته وأديره عبر SSH.</span></li>
-              <li><span class="en">Gives analysis only, never buy or sell signals.</span><span class="ar">يقدّم تحليلاً فقط، دون توصيات بيع أو شراء.</span></li>
-            </ul>
-            <div class="pmeta">
-              <p class="tools">Python · yfinance · Docker · Ubuntu Server</p>
-            </div>
-          </div>
-        </details>
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="wrap">
+      <p class="eyebrow"><span class="en">Process</span><span class="ar">طريقة العمل</span></p>
+      <h2><span class="en">How a project with me works</span><span class="ar">كيف يسير المشروع معي</span></h2>
+      <p class="intro"><span class="en">No surprises. You know the price, the timeline and what you will receive before any work starts.</span><span class="ar">دون مفاجآت. تعرف السعر والمدة وما ستستلمه قبل أن يبدأ أي عمل.</span></p>
+      <ol class="steps">
+        <li><p class="n">01</p><h3><span class="en">Free call</span><span class="ar">مكالمة مجانية</span></h3><p><span class="en">We talk about your business and what is slowing you down. Phone, WhatsApp or video.</span><span class="ar">نتحدث عن عملك وما يعطّلك. عبر الهاتف أو واتساب أو مكالمة فيديو.</span></p></li>
+        <li><p class="n">02</p><h3><span class="en">Clear proposal</span><span class="ar">عرض واضح</span></h3><p><span class="en">A written scope with a fixed price, a timeline and exactly what you will get.</span><span class="ar">نطاق عمل مكتوب بسعر ثابت ومدة محددة وما ستستلمه بالضبط.</span></p></li>
+        <li><p class="n">03</p><h3><span class="en">Build and review</span><span class="ar">التنفيذ والمراجعة</span></h3><p><span class="en">Regular updates and working previews, so you can give feedback early.</span><span class="ar">تحديثات منتظمة ونسخ تجريبية تعمل، لتعطي ملاحظاتك مبكراً.</span></p></li>
+        <li><p class="n">04</p><h3><span class="en">Launch and handover</span><span class="ar">الإطلاق والتسليم</span></h3><p><span class="en">Deployed, documented and explained to your team, with support available after launch.</span><span class="ar">نشر وتوثيق وشرح لفريقك، مع دعم متاح بعد الإطلاق.</span></p></li>
+      </ol>
+    </div>
+  </section>
 
-        <details>
-          <summary><span><span class="pname">Data Science Portfolio</span><span class="pone"><span class="en">Analyses and models on real datasets</span><span class="ar">تحليلات ونماذج على بيانات حقيقية</span></span></span><span class="ptag"><span class="en">Data analysis</span><span class="ar">تحليل البيانات</span></span><span class="plus" aria-hidden="true"></span></summary>
-          <div class="pbody">
-            <ul>
-              <li><span class="en">Customer churn prediction and heart disease classification.</span><span class="ar">التنبؤ بفقدان العملاء وتصنيف أمراض القلب.</span></li>
-              <li><span class="en">Market-basket analysis with the Apriori algorithm, and a movie recommender built on MovieLens.</span><span class="ar">تحليل سلة المشتريات بخوارزمية Apriori، ونظام توصية أفلام مبني على بيانات MovieLens.</span></li>
-              <li><span class="en">SQL work in SQLite and data collected through web scraping.</span><span class="ar">استعلامات SQL على SQLite، وجمع بيانات من الويب.</span></li>
-            </ul>
-            <div class="pmeta">
-              <p class="tools">Python · SQLite · Apriori · Web scraping</p>
-              <span class="pstate live"><span class="en">Public on GitHub</span><span class="ar">منشور على GitHub</span></span>
-            </div>
-          </div>
-        </details>
+  <!-- ENGAGEMENT -->
+  <section id="engage">
+    <div class="wrap">
+      <p class="eyebrow"><span class="en">Ways to work together</span><span class="ar">طرق التعاون</span></p>
+      <h2><span class="en">Pick what fits you</span><span class="ar">اختر ما يناسبك</span></h2>
+      <p class="intro"><span class="en">Every quote is based on your scope. Tell me what you need and I'll send a price within a day.</span><span class="ar">كل عرض سعر مبني على نطاق مشروعك. أخبرني بما تحتاجه وسأرسل لك السعر خلال يوم.</span></p>
+      <div class="engage">
+        <div class="plan hl">
+          <h3><span class="en">Fixed-price project</span><span class="ar">مشروع بسعر ثابت</span></h3>
+          <p class="best"><span class="en">Best for a new system or dashboard</span><span class="ar">الأنسب لنظام أو لوحة متابعة جديدة</span></p>
+          <ul>
+            <li><span class="en">Agreed scope, price and deadline</span><span class="ar">نطاق وسعر وموعد تسليم متفق عليها</span></li>
+            <li><span class="en">Source code and documentation</span><span class="ar">الكود المصدري والتوثيق</span></li>
+            <li><span class="en">Walkthrough for your team</span><span class="ar">شرح لفريقك</span></li>
+          </ul>
+          <a class="btn primary" href="#contact"><span class="en">Request a quote</span><span class="ar">اطلب عرض سعر</span></a>
+        </div>
+        <div class="plan">
+          <h3><span class="en">Ongoing support</span><span class="ar">دعم مستمر</span></h3>
+          <p class="best"><span class="en">Best once your system is live</span><span class="ar">الأنسب بعد تشغيل نظامك</span></p>
+          <ul>
+            <li><span class="en">Fixes, small features and updates</span><span class="ar">إصلاحات وميزات صغيرة وتحديثات</span></li>
+            <li><span class="en">Monthly reports and data checks</span><span class="ar">تقارير شهرية ومراجعة البيانات</span></li>
+            <li><span class="en">One person who knows your system</span><span class="ar">شخص واحد يعرف نظامك</span></li>
+          </ul>
+          <a class="btn ghost" href="#contact"><span class="en">Ask about support</span><span class="ar">اسأل عن الدعم</span></a>
+        </div>
+        <div class="plan">
+          <h3><span class="en">Full-time role</span><span class="ar">وظيفة بدوام كامل</span></h3>
+          <p class="best"><span class="en">For hiring managers and recruiters</span><span class="ar">لمدراء التوظيف والمسؤولين عنه</span></p>
+          <ul>
+            <li><span class="en">Data Analyst, Data Engineer or ML Engineer</span><span class="ar">محلل بيانات، مهندس بيانات، أو مهندس تعلّم آلة</span></li>
+            <li><span class="en">Remote, or relocating to the GCC, Canada or Australia</span><span class="ar">عن بُعد، أو الانتقال إلى الخليج أو كندا أو أستراليا</span></li>
+            <li><span class="en">CV available on request</span><span class="ar">السيرة الذاتية متاحة عند الطلب</span></li>
+          </ul>
+          <a class="btn ghost" href="mailto:amir.salah.cs@gmail.com?subject=Job%20opportunity"><span class="en">Email me about a role</span><span class="ar">راسلني بخصوص وظيفة</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <details>
-          <summary><span><span class="pname">NLTK Chatbot</span><span class="pone"><span class="en">Retrieval chatbot over news, medical and encyclopedia text</span><span class="ar">روبوت محادثة يسترجع الإجابات من الأخبار والنصوص الطبية والموسوعية</span></span></span><span class="ptag"><span class="en">Natural language</span><span class="ar">معالجة اللغة</span></span><span class="plus" aria-hidden="true"></span></summary>
-          <div class="pbody">
-            <ul>
-              <li><span class="en">Answers questions using BBC News articles, a medical Q&amp;A set and Wikipedia.</span><span class="ar">يجيب عن الأسئلة من مقالات BBC News ومجموعة أسئلة وأجوبة طبية وويكيبيديا.</span></li>
-              <li><span class="en">Finds the best matching answer with TF-IDF and cosine similarity.</span><span class="ar">يجد أقرب إجابة باستخدام TF-IDF وتشابه جيب التمام.</span></li>
-            </ul>
-            <div class="pmeta">
-              <p class="tools">Python · NLTK · TF-IDF · Cosine similarity</p>
-              <span class="pstate live"><span class="en">Public on GitHub</span><span class="ar">منشور على GitHub</span></span>
-            </div>
-          </div>
-        </details>
-
-        <details>
-          <summary><span><span class="pname">Fly Brain Pianist</span><span class="pone"><span class="en">A simulated fly brain learning to play piano</span><span class="ar">محاكاة دماغ ذبابة تتعلّم العزف على البيانو</span></span></span><span class="ptag"><span class="en">Research</span><span class="ar">مشروع بحثي</span></span><span class="plus" aria-hidden="true"></span></summary>
-          <div class="pbody">
-            <ul>
-              <li><span class="en">Simulates the MaleCNS fly connectome, the wiring map of a fruit fly's nervous system.</span><span class="ar">يحاكي شبكة MaleCNS العصبية، وهي خريطة الجهاز العصبي لذبابة الفاكهة.</span></li>
-              <li><span class="en">Trained with reinforcement learning to play piano.</span><span class="ar">مدرَّب بالتعلّم المعزّز على العزف على البيانو.</span></li>
-            </ul>
-            <div class="pmeta">
-              <p class="tools">Python · PyTorch · Reinforcement learning</p>
-              <span class="pstate"><span class="en">In progress</span><span class="ar">قيد التطوير</span></span>
-            </div>
-          </div>
-        </details>
-
-        <details>
-          <summary><span><span class="pname">Jarvis</span><span class="pone"><span class="en">Arabic and English desktop voice assistant</span><span class="ar">مساعد صوتي لسطح المكتب بالعربية والإنجليزية</span></span></span><span class="ptag"><span class="en">Desktop app</span><span class="ar">تطبيق سطح مكتب</span></span><span class="plus" aria-hidden="true"></span></summary>
-          <div class="pbody">
-            <ul>
-              <li><span class="en">Understands 29 spoken commands through a custom intent engine, and speaks back.</span><span class="ar">يفهم 29 أمراً صوتياً عبر محرّك نوايا مخصص، ويردّ بالصوت.</span></li>
-              <li><span class="en">Works in Arabic and English, and uses the Claude API for open questions.</span><span class="ar">يعمل بالعربية والإنجليزية، ويستخدم Claude API للأسئلة المفتوحة.</span></li>
-              <li><span class="en">Controls apps from a desktop interface.</span><span class="ar">يتحكم بالتطبيقات من واجهة سطح مكتب.</span></li>
-            </ul>
-            <div class="pmeta">
-              <p class="tools">Python · Claude API · SAPI5 · PyQt · Tkinter</p>
-            </div>
-          </div>
-        </details>
-
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <p class="eyebrow"><span class="en">About</span><span class="ar">عنّي</span></p>
+      <h2><span class="en">A developer who explains things in plain language</span><span class="ar">مطوّر يشرح الأمور بلغة واضحة</span></h2>
+      <div class="about">
+        <div>
+          <p class="en">I'm a Computer Science and Artificial Intelligence graduate from Aqaba University of Technology. I like problems where the answer is hiding in data, and I like shipping tools that people actually use.</p>
+          <p class="ar">أنا خريج علوم الحاسوب والذكاء الاصطناعي من جامعة العقبة للتكنولوجيا. أحب المشكلات التي يختبئ حلّها داخل البيانات، وأحب أن أسلّم أدوات يستخدمها الناس فعلاً.</p>
+          <p class="en">I've delivered a management system to a paying client, built a medical imaging classifier, and written a scheduling engine that plans a full semester for over a thousand students in under 20 seconds. I work mostly in Python and SQL.</p>
+          <p class="ar">سلّمت نظام إدارة لعميل، وبنيت نموذجاً لتصنيف صور الرنين المغناطيسي، وكتبت محرّك جداول يخطط فصلاً دراسياً كاملاً لأكثر من ألف طالب في أقل من 20 ثانية. أعمل غالباً بـ Python وSQL.</p>
+          <p class="en">When you work with me you deal with one person from the first call to the handover. I tell you early if something will take longer or cost more, and I write code that someone else can pick up later.</p>
+          <p class="ar">عندما تعمل معي تتعامل مع شخص واحد من أول مكالمة حتى التسليم. أخبرك مبكراً إن كان شيء سيتأخر أو سيكلف أكثر، وأكتب كوداً يستطيع غيري متابعته لاحقاً.</p>
+        </div>
+        <dl class="facts">
+          <div><dt><span class="en">Based in</span><span class="ar">مكان الإقامة</span></dt><dd><span class="en">Aqaba, Jordan (UTC+3)</span><span class="ar">العقبة، الأردن (UTC+3)</span></dd></div>
+          <div><dt><span class="en">Works with</span><span class="ar">أعمل مع</span></dt><dd><span class="en">Clients in Jordan and abroad, remotely</span><span class="ar">عملاء في الأردن وخارجه، عن بُعد</span></dd></div>
+          <div><dt><span class="en">Open to relocating</span><span class="ar">مستعد للانتقال إلى</span></dt><dd><span class="en">UAE, Saudi Arabia, Qatar, Kuwait, Canada, Australia</span><span class="ar">الإمارات، السعودية، قطر، الكويت، كندا، أستراليا</span></dd></div>
+          <div><dt><span class="en">Education</span><span class="ar">التعليم</span></dt><dd><span class="en">BSc Computer Science &amp; AI, June 2026</span><span class="ar">بكالوريوس علوم الحاسوب والذكاء الاصطناعي، حزيران 2026</span></dd></div>
+          <div><dt><span class="en">Languages</span><span class="ar">اللغات</span></dt><dd><span class="en">Arabic, English, Russian</span><span class="ar">العربية، الإنجليزية، الروسية</span></dd></div>
+        </dl>
       </div>
     </div>
   </section>
@@ -427,13 +546,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="wrap">
-      <h2><span class="en">Experience &amp; education</span><span class="ar">الخبرة والتعليم</span></h2>
+      <p class="eyebrow"><span class="en">Experience</span><span class="ar">الخبرة</span></p>
+      <h2><span class="en">Experience and education</span><span class="ar">الخبرة والتعليم</span></h2>
       <p class="intro"><span class="en">Most recent first.</span><span class="ar">الأحدث أولاً.</span></p>
       <ol class="timeline">
         <li>
           <p class="when"><span class="en">Nov 2026 to present</span><span class="ar">تشرين الثاني 2026 حتى الآن</span></p>
-          <h3><span class="en">Freelance Software Developer, self-employed</span><span class="ar">مطوّر برمجيات فريلانس، عمل حر</span></h3>
-          <p><span class="en">Python web apps, databases and data work for clients, based in Aqaba.</span><span class="ar">تطبيقات ويب بايثون وقواعد بيانات وتحليل بيانات للعملاء، من العقبة.</span></p>
+          <h3><span class="en">Freelance Software Developer, self-employed</span><span class="ar">مطوّر برمجيات مستقل، عمل حر</span></h3>
+          <p><span class="en">Management systems, dashboards and data work for clients, based in Aqaba.</span><span class="ar">أنظمة إدارة ولوحات متابعة وتحليل بيانات للعملاء، من العقبة.</span></p>
         </li>
         <li>
           <p class="when"><span class="en">Sep 2025 to Sep 2026</span><span class="ar">أيلول 2025 إلى أيلول 2026</span></p>
@@ -466,62 +586,103 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <p class="eyebrow"><span class="en">FAQ</span><span class="ar">أسئلة شائعة</span></p>
+      <h2><span class="en">Questions clients usually ask</span><span class="ar">أسئلة يطرحها العملاء عادةً</span></h2>
+      <div class="faq">
+        <details>
+          <summary><span><span class="en">How much does a project cost?</span><span class="ar">كم تكلفة المشروع؟</span></span><span class="plus" aria-hidden="true"></span></summary>
+          <p><span class="en">It depends on the scope. After a short call I send a fixed price in writing, so you know the full cost before anything starts.</span><span class="ar">يعتمد على نطاق العمل. بعد مكالمة قصيرة أرسل لك سعراً ثابتاً مكتوباً، لتعرف التكلفة كاملة قبل أن يبدأ أي شيء.</span></p>
+        </details>
+        <details>
+          <summary><span><span class="en">Do you work with clients outside Jordan?</span><span class="ar">هل تعمل مع عملاء خارج الأردن؟</span></span><span class="plus" aria-hidden="true"></span></summary>
+          <p><span class="en">Yes. I work remotely and communicate in Arabic or English, so location is not a problem.</span><span class="ar">نعم. أعمل عن بُعد وأتواصل بالعربية أو الإنجليزية، فالموقع ليس مشكلة.</span></p>
+        </details>
+        <details>
+          <summary><span><span class="en">Who owns the code at the end?</span><span class="ar">لمن يعود الكود في النهاية؟</span></span><span class="plus" aria-hidden="true"></span></summary>
+          <p><span class="en">You do. Once the project is paid in full you receive the source code and everything needed to run it.</span><span class="ar">لك. بعد اكتمال الدفع تستلم الكود المصدري وكل ما تحتاجه لتشغيله.</span></p>
+        </details>
+        <details>
+          <summary><span><span class="en">What happens after launch?</span><span class="ar">ماذا يحدث بعد الإطلاق؟</span></span><span class="plus" aria-hidden="true"></span></summary>
+          <p><span class="en">I stay available for fixes and changes. If you need regular updates or reports, we can agree on ongoing support.</span><span class="ar">أبقى متاحاً للإصلاحات والتعديلات. وإذا احتجت تحديثات أو تقارير منتظمة، نتفق على دعم مستمر.</span></p>
+        </details>
+        <details>
+          <summary><span><span class="en">I'm not technical. Is that a problem?</span><span class="ar">لست تقنياً، هل هذه مشكلة؟</span></span><span class="plus" aria-hidden="true"></span></summary>
+          <p><span class="en">Not at all. Most of my clients aren't. Tell me how your business works today and I'll handle the technical side and explain it plainly.</span><span class="ar">أبداً. معظم عملائي ليسوا تقنيين. أخبرني كيف يسير عملك اليوم، وأنا أتولى الجانب التقني وأشرحه ببساطة.</span></p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact" class="contact">
-    <div class="wrap">
-      <h2><span class="en">Have a project in mind? Let's talk.</span><span class="ar">عندك مشروع؟ خلّينا نحكي.</span></h2>
-      <p class="intro" style="margin-bottom:0"><span class="en">I usually reply within a day. Write in Arabic or English.</span><span class="ar">أردّ عادةً خلال يوم. راسلني بالعربية أو الإنجليزية.</span></p>
-      <div class="clist">
-        <div class="citem">
-          <small><span class="en">Email</span><span class="ar">الإيميل</span></small>
-          <a href="mailto:amir.salah.cs@gmail.com"><b>amir.salah.cs@gmail.com</b></a>
-          <button class="copy" type="button" data-copy="amir.salah.cs@gmail.com"><span class="en">Copy email</span><span class="ar">نسخ الإيميل</span></button>
+    <div class="wrap grid">
+      <div>
+        <p class="eyebrow"><span class="en">Contact</span><span class="ar">تواصل</span></p>
+        <h2><span class="en">Tell me about your project</span><span class="ar">حدّثني عن مشروعك</span></h2>
+        <p class="intro" style="margin-bottom:0"><span class="en">I usually reply within a day. Write in Arabic or English.</span><span class="ar">أردّ عادةً خلال يوم. راسلني بالعربية أو الإنجليزية.</span></p>
+        <div class="clist">
+          <a class="citem" href="mailto:amir.salah.cs@gmail.com"><small><span class="en">Email</span><span class="ar">الإيميل</span></small><b>amir.salah.cs@gmail.com</b></a>
+          <a class="citem" href="https://wa.me/962796603874" target="_blank" rel="noopener"><small><span class="en">WhatsApp / phone</span><span class="ar">واتساب / هاتف</span></small><b>+962 79 660 3874</b></a>
+          <a class="citem" href="https://www.linkedin.com/in/amir-salah-08255a1a9" target="_blank" rel="noopener"><small>LinkedIn</small><b>in/amir-salah-08255a1a9</b></a>
+          <a class="citem" href="https://github.com/amirsalla7" target="_blank" rel="noopener"><small>GitHub</small><b>github.com/amirsalla7</b></a>
         </div>
-        <a class="citem" href="https://wa.me/962796603874" target="_blank" rel="noopener">
-          <small><span class="en">WhatsApp / phone</span><span class="ar">واتساب / هاتف</span></small>
-          <b>+962 79 660 3874</b>
-        </a>
-        <a class="citem" href="https://www.linkedin.com/in/amir-salah-08255a1a9" target="_blank" rel="noopener">
-          <small>LinkedIn</small>
-          <b>in/amir-salah-08255a1a9</b>
-        </a>
-        <a class="citem" href="https://github.com/amirsalla7" target="_blank" rel="noopener">
-          <small>GitHub</small>
-          <b>github.com/amirsalla7</b>
-        </a>
       </div>
+      <form id="enquiry">
+        <h3><span class="en">Project enquiry</span><span class="ar">طلب مشروع</span></h3>
+        <p class="note"><span class="en">This opens an email to me with your details filled in.</span><span class="ar">سيفتح هذا رسالة إيميل لي بتفاصيلك جاهزة.</span></p>
+        <div class="row2">
+          <label><span class="en">Your name</span><span class="ar">اسمك</span><input name="name" required autocomplete="name"></label>
+          <label><span class="en">Business or company</span><span class="ar">النشاط أو الشركة</span><input name="company" autocomplete="organization"></label>
+        </div>
+        <label><span class="en">What do you need?</span><span class="ar">ماذا تحتاج؟</span>
+          <select name="type">
+            <option value="Management system" data-ar="نظام إدارة">Management system</option>
+            <option value="Data analysis or dashboard" data-ar="تحليل بيانات أو لوحة متابعة">Data analysis or dashboard</option>
+            <option value="Machine learning or AI" data-ar="تعلّم آلة أو ذكاء اصطناعي">Machine learning or AI</option>
+            <option value="Automation or bot" data-ar="أتمتة أو بوت">Automation or bot</option>
+            <option value="Job opportunity" data-ar="فرصة وظيفية">Job opportunity</option>
+            <option value="Something else" data-ar="شيء آخر">Something else</option>
+          </select>
+        </label>
+        <label><span class="en">Tell me a bit about it</span><span class="ar">أخبرني باختصار</span><textarea name="msg" required></textarea></label>
+        <button class="btn primary" type="submit"><span class="en">Send enquiry</span><span class="ar">أرسل الطلب</span></button>
+      </form>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Amir Salah</span>
-    <span class="en">Aqaba, Jordan</span><span class="ar">العقبة، الأردن</span>
+    <span>© 2026 Amir Salah. <span class="en">Freelance developer, Aqaba, Jordan.</span><span class="ar">مطوّر مستقل، العقبة، الأردن.</span></span>
+    <span><a href="#top"><span class="en">Back to top</span><span class="ar">العودة للأعلى</span></a></span>
   </div>
 </footer>
 
 <script>
 (function(){
   var root=document.documentElement, btn=document.getElementById('lang');
+  var opts=document.querySelectorAll('#enquiry option');
+  opts.forEach(function(o){ o.setAttribute('data-en',o.textContent); });
   function set(l){
     root.lang=l; root.dir=(l==='ar')?'rtl':'ltr';
     btn.textContent=(l==='ar')?'English':'عربي';
-    document.title=(l==='ar')?'أمير صلاح، مطوّر فريلانس':'Amir Salah, Freelance Developer';
+    document.title=(l==='ar')?'أمير صلاح، مطوّر بيانات وبايثون مستقل':'Amir Salah, Freelance Data and Python Developer';
+    opts.forEach(function(o){ o.textContent=o.getAttribute(l==='ar'?'data-ar':'data-en'); });
     try{localStorage.setItem('lang',l)}catch(e){}
   }
   var saved=null; try{saved=localStorage.getItem('lang')}catch(e){}
   if(saved==='ar') set('ar');
   btn.addEventListener('click',function(){ set(root.lang==='ar'?'en':'ar'); });
 
-  document.querySelectorAll('.copy').forEach(function(b){
-    b.addEventListener('click',function(){
-      var v=b.getAttribute('data-copy'), en=b.querySelector('.en'), ar=b.querySelector('.ar');
-      var done=function(){ en.textContent='Copied'; ar.textContent='تم النسخ';
-        setTimeout(function(){ en.textContent='Copy email'; ar.textContent='نسخ الإيميل'; },1800); };
-      try{ navigator.clipboard.writeText(v).then(done,function(){ en.textContent=v; ar.textContent=v; }); }
-      catch(e){ en.textContent=v; ar.textContent=v; }
-    });
+  document.getElementById('enquiry').addEventListener('submit',function(e){
+    e.preventDefault();
+    var f=e.target, name=f.name.value.trim(), co=f.company.value.trim(), type=f.type.value, msg=f.msg.value.trim();
+    var subject='Project enquiry: '+type+(co?' ('+co+')':'');
+    var body='Name: '+name+'\nBusiness: '+(co||'-')+'\nNeed: '+type+'\n\n'+msg;
+    location.href='mailto:amir.salah.cs@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
   });
 })();
 </script>
