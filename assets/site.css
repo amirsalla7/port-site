@@ -160,7 +160,7 @@ html[lang="ar"] .case dt{letter-spacing:0;text-transform:none;font-size:14px}
 @media (max-width:860px){ .engage{grid-template-columns:1fr} }
 
 /* about */
-.about{display:grid;grid-template-columns:1.2fr .8fr;gap:56px}
+.about{max-width:720px}
 .about p{max-width:62ch;margin-bottom:18px}
 .facts{border-inline-start:1px solid var(--gold);padding-inline-start:28px;display:grid;gap:20px;align-content:start}
 .facts dt{font-size:14px;color:var(--muted)}
